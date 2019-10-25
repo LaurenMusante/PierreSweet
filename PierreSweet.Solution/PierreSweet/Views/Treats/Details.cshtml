@@ -8,30 +8,29 @@
 
 <h2>Treat Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-<h3>Calories: @Html.DisplayFor(model => model.Calories)</h3>
-<h3>Price: @Html.DisplayFor(model => model.Price)</h3>
+    <h6>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h6>
+    <h6>Calories: @Html.DisplayFor(model => model.Calories)</h6>
+    <h6>Price: @Html.DisplayFor(model => model.Price)</h6>
 
-<h3>
-@switch(Model.Rating)
-  {
-    case "1":
-      <i class="fas fa-heart"></i><i class="fas fa-heart fas-faded"></i><i class="fas fa-heart fas-faded"></i><i class="fas fa-heart fas-faded"></i><i class="fas fa-heart fas-faded"></i>
-      break;
-    case "2":
-      <i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart fas-faded"></i><i class="fas fa-heart fas-faded"></i><i class="fas fa-heart fas-faded"></i>
-      break;
-    case "3":
-      <i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart fas-faded"></i><i class="fas fa-heart fas-faded"></i>
-      break;
-    case "4":
-      <i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart fas-faded"></i>
-      break;
-    case "5":
-      <i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i>
-      break;
-  }
-</h3>
+    <h3>@switch(Model.Rating)
+    {
+        case "1":
+        <i class="fas fa-heart"></i><i class="fas fa-heart fas-faded"></i><i class="fas fa-heart fas-faded"></i><i class="fas fa-heart fas-faded"></i><i class="fas fa-heart fas-faded"></i>
+        break;
+        case "2":
+        <i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart fas-faded"></i><i class="fas fa-heart fas-faded"></i><i class="fas fa-heart fas-faded"></i>
+        break;
+        case "3":
+        <i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart fas-faded"></i><i class="fas fa-heart fas-faded"></i>
+        break;
+        case "4":
+        <i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart fas-faded"></i>
+        break;
+        case "5":
+        <i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i>
+        break;
+    }
+    </h3>
 
 @if(@Model.Flavors.Count == 0)
 {
@@ -39,8 +38,8 @@
 }
 else
 {
-  <h4>Flavor this treat belongs to:</h4>
   <div class="flavor-wrap">
+  <h4>Flavor this treat belongs to:</h4>
   
   @foreach(var join in Model.Flavors)
   {

@@ -13,7 +13,7 @@
     {
         <div class="well">
             <h4>@Html.ActionLink($"{treat.Name}", "Details", new { id = treat.TreatId })</h4>
-            <h5>Calories: @treat.Calories</h5>
+            <h4>Calories: @treat.Calories</h4>
             <h3>
               @switch(treat.Rating)
                 {

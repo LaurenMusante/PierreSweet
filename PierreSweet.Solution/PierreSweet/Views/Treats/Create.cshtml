@@ -8,13 +8,13 @@
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Name, "Treat Name:")
+    <h6>@Html.LabelFor(model => model.Name, "Treat Name:")</h6>
     @Html.TextBoxFor(model => model.Name, new {@class = "form-control"})
 
-    @Html.LabelFor(model => model.Calories, "Total Calories:")
+    <h6>@Html.LabelFor(model => model.Calories, "Total Calories:")</h6>
     @Html.TextBoxFor(model => model.Calories, new {@class = "form-control"})
 
-    @Html.LabelFor(model => model.Rating)
+    <p>@Html.LabelFor(model => model.Rating)</p>
     <select id="Rating" name="Rating">
         <option value="1">1</option>
         <option value="2">2</option>
@@ -23,7 +23,7 @@
         <option value="5">5</option>
     </select>
 
-    @Html.Label("Select Flavor Type")
+    <p>@Html.Label("Select Flavor Type")</p>
     @Html.DropDownList("FlavorId")<br>
 
     <input type="submit" value="Add new Treat" class="btn btn-info" />

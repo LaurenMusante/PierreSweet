@@ -7,8 +7,9 @@
 <h2>Add a New Flavor Type</h2>
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Type)
-    @Html.TextBoxFor(model => model.Type)
-    <input type="submit" value="Add new flavor" class="btn btn-info" />
+    <h6>@Html.LabelFor(model => model.Type, "Flavor Type:")</h6>
+    @Html.TextBoxFor(model => model.Type, new {@class = "form-control"})
+
+    <input type="submit" value="Add new Flavor" class="btn btn-info" />
 }
 <p>@Html.ActionLink("Show all Flavors", "Index", new {}, new {@class = "html-links"}) </p>
