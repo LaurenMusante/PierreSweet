@@ -12,7 +12,7 @@
 <h3>Calories: @Html.DisplayFor(model => model.Calories)</h3>
 <h3>Price: @Html.DisplayFor(model => model.Price)</h3>
 
-@*<h3>
+<h3>
 @switch(Model.Rating)
   {
     case "1":
@@ -31,7 +31,7 @@
       <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
       break;
   }
-</h3>*@
+</h3>
 
 @if(@Model.Flavors.Count == 0)
 {
@@ -55,4 +55,4 @@ else
   </div>
 }
 
-<p>@Html.ActionLink("Back to list", "Index", new {}, new {@class = "html-links"}) | @Html.ActionLink("Edit Treat", "Edit", new { id = Model.TreatId }, new {@class = "html-links"}) | @Html.ActionLink("Delete Treat", "Delete", new { id = Model.TreatId }, new {@class = "html-links"}) | @Html.ActionLink("Add a Flavor", "AddCuisine", new { id = Model.TreatId }, new {@class = "html-links"})</p>
+<p>@Html.ActionLink("Back to list", "Index", new {}, new {@class = "html-links"}) | @Html.ActionLink("Edit Treat", "Edit", new { id = Model.TreatId }, new {@class = "html-links"}) | @Html.ActionLink("Delete Treat", "Delete", new { id = Model.TreatId }, new {@class = "html-links"}) | @Html.ActionLink("Add a Flavor", "AddFlavor", new { id = Model.TreatId }, new {@class = "html-links"})</p>

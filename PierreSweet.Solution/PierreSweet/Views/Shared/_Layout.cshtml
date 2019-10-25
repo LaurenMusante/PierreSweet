@@ -2,24 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Sweets & Savories</title>
+    <title>Chez Pierre's</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
     <link rel="stylesheet" href="~/css/styles.css" type="text/css">
+    <script src="https://kit.fontawesome.com/a26d2ada82.js" crossorigin="anonymous"></script>
   </head>
   <body>
-
-      <div class="navbar">
+    <div class="navbar">
         <a class="active" href="/"><i class="fa fa-fw fa-home icons"></i> Home</a>
-        <a href="/Cuisines/Index"><i class="fa fa-fw fa-utensils icons"></i> Cuisines</a>
-        <a href="/Recipes/Index"><i class="fa fa-fw fa-folder icons"></i> Recipes</a>
-        <a href="/Account/Index"><i class="fa fa-fw fa-smile icons"></i> Accounts</a>
+        <a href="/Flavors/Index"><i class="fas fa-grin-tongue"></i> Flavors</a>
+        <a href="/Treats/Index"><i class="fas fa-birthday-cake"></i> Treats</a>
+        <a href="/Account/Index"><i class="fas fa-user-circle"></i> Accounts</a>
         <a href="/Home/Search"><i class="fa fa-fw fa-search icons"></i> Search</a>
-      </div>
-    <div class="home-button">
-    <h1>Pierre's Sweet and Savory Treats</h1>
     </div>
     <div class="container">
-    @RenderBody()
+        <h1>Pierre's Sweet & Savory Treats</h1>
+        @RenderBody()
     </div>
   </body>
 </html>
+

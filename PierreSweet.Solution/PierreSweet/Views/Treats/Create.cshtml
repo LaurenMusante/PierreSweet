@@ -4,7 +4,7 @@
 
 @model Bakery.Models.Treat
 
-<h3>Add a new Treat!</h3>
+<h2>Add a new Treat!</h2>
 
 @using (Html.BeginForm())
 {
@@ -14,21 +14,18 @@
     @Html.LabelFor(model => model.Calories, "Total Calories:")
     @Html.TextBoxFor(model => model.Calories, new {@class = "form-control"})
 
-    @Html.LabelFor(model => model.Price, "Price: $")
-    @Html.TextAreaFor(model => model.Price, new {@class = "form-control"})
-
-    @*@Html.LabelFor(model => model.Rating)
+    @Html.LabelFor(model => model.Rating)
     <select id="Rating" name="Rating">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5</option>
-    </select>*@
+    </select>
 
-    @Html.Label("Select flavor type")
+    @Html.Label("Select Flavor Type")
     @Html.DropDownList("FlavorId")<br>
 
-    <input type="submit" value="Add new recipe" class="btn btn-info" />
+    <input type="submit" value="Add new Treat" class="btn btn-info" />
 }
 <p>@Html.ActionLink("Show All Treats", "Index", new {}, new {@class = "html-links"})</p>
