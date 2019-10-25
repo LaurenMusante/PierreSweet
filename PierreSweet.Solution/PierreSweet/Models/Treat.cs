@@ -6,7 +6,7 @@ namespace Bakery.Models
     {
         public Treat()
         {
-            // this.Flavors = new HashSet<FlavorTreat>();
+            this.Flavors = new HashSet<FlavorTreat>();
         }
 
         public int TreatId { get; set; }
@@ -16,6 +16,6 @@ namespace Bakery.Models
         public string Rating { get; set; }
         public virtual ApplicationUser User { get; set; }
 
-        // public ICollection<FlavorTreat> Cuisines { get; }
+        public ICollection<FlavorTreat> Flavors { get; }
     }
 }

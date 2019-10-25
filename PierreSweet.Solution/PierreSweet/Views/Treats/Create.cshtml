@@ -1,0 +1,34 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Bakery.Models.Treat
+
+<h3>Add a new Treat!</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name, "Treat Name:")
+    @Html.TextBoxFor(model => model.Name, new {@class = "form-control"})
+
+    @Html.LabelFor(model => model.Calories, "Total Calories:")
+    @Html.TextBoxFor(model => model.Calories, new {@class = "form-control"})
+
+    @Html.LabelFor(model => model.Price, "Price: $")
+    @Html.TextAreaFor(model => model.Price, new {@class = "form-control"})
+
+    @*@Html.LabelFor(model => model.Rating)
+    <select id="Rating" name="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>*@
+
+    @Html.Label("Select flavor type")
+    @Html.DropDownList("FlavorId")<br>
+
+    <input type="submit" value="Add new recipe" class="btn btn-info" />
+}
+<p>@Html.ActionLink("Show All Treats", "Index", new {}, new {@class = "html-links"})</p>
